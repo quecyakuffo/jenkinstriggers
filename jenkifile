@@ -1,39 +1,10 @@
 pipeline {
     agent any
-
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello, Jenkins!'
+                echo 'Pipeline works!'
             }
-        }
-
-        stage('Build') {
-            steps {
-                echo 'Building the project...'
-                sh 'echo "Build step running on $(hostname)"'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                echo 'Running tests...'
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                echo 'Deploying the application...'
-            }
-        }
-    }
-
-    post {
-        success {
-            echo 'Pipeline finished successfully!'
-        }
-        failure {
-            echo 'Pipeline failed.'
         }
     }
 }
